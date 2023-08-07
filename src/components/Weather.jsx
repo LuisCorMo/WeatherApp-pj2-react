@@ -15,7 +15,6 @@ const Weather = ({weatherInfo, updateWeatherInfo}) => {
 
   const hanldeSubmit = (e) =>{
     e.preventDefault()
-    e.target.reset()
     const name = e.target.name.value
     
     const API_KEY = "f83e9d21e6e9890c4c1aa415f5a4da18"
@@ -24,12 +23,10 @@ const Weather = ({weatherInfo, updateWeatherInfo}) => {
     axios.get(URL)
     .then(({data}) => {setCountry(data)
       updateWeatherInfo(data)})
-    .catch((err) => console.log(err))
+      .catch((err) => console.log(err))
+    
+    e.target.reset()
   }
-  
-  
-  
-  // console.log(name)
 
   return (
     <section className="font-principal-font bg-weather bg-no-repeat bg-contain bg-center sm:w-[400px] grid grid-rows-3">
