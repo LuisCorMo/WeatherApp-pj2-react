@@ -25,7 +25,7 @@ export default {
       },
 
       animation: {
-        progressBar: 'progressBar 4s linear infinite',
+        progressBar: 'progressBar 2s linear',
       }
     },
   },
